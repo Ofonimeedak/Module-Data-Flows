@@ -70,3 +70,19 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function gryffindorHouse(WizardAndWitch) {
+  const gryffindorMates = [];
+  for (const mate of WizardAndWitch) {
+    const { firstName, lastName, house } = mate;
+    if (house === "Gryffindor") {
+      gryffindorMates.push({
+        firstName: `${firstName}`,
+        lastName: `${lastName}`,
+      });
+    }
+  }
+  return gryffindorMates;
+}
+
+gryffindorHouse(hogwarts);
