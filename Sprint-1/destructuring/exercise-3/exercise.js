@@ -9,12 +9,18 @@ let order = [
 
 function orderReceipt(orderItems) {
   const totalList = [];
+  console.log("QUANTITY  ITEM               TOTAL");
   for (const item of orderItems) {
     const { itemName, quantity, unitPricePence } = item;
 
     const total = ((quantity * unitPricePence) / 100).toFixed(2);
     totalList.push(total);
-    const itemInfo = console.log(`   ${quantity}    ${itemName}     ${total} `);
+
+    console.log(
+      `${quantity.toString().padEnd(8)}  ` +
+        `${itemName.padEnd(17)}  ` +
+        `${total}`
+    );
   }
 
   const grandTotal = totalList.reduce((accumulator, current) => {
@@ -23,6 +29,7 @@ function orderReceipt(orderItems) {
   }, 0);
   const finalBill = grandTotal.toFixed(2);
   console.log(`Total:${finalBill}`);
+  console.log("-----------------");
 }
 
 orderReceipt(order);
