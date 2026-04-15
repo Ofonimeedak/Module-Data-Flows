@@ -71,18 +71,28 @@ let hogwarts = [
   },
 ];
 
+//Task 1
 function gryffindorHouse(WizardAndWitch) {
-  const gryffindorMates = [];
-  for (const mate of WizardAndWitch) {
+  for (let mate of WizardAndWitch) {
     const { firstName, lastName, house } = mate;
     if (house === "Gryffindor") {
-      gryffindorMates.push({
-        firstName: `${firstName}`,
-        lastName: `${lastName}`,
-      });
+      const gryffindorMates = `${firstName} ${lastName} lives in `;
+      console.log(gryffindorMates);
     }
   }
-  return gryffindorMates;
 }
 
 gryffindorHouse(hogwarts);
+
+//Task2
+
+function teacherWithPet(WizardAndWitch) {
+  for (let teacher of WizardAndWitch) {
+    const { firstName, lastName, pet } = teacher;
+    if (pet !== null) {
+      const teacherPet = `${firstName} ${lastName} has a pet`;
+      console.log(teacherPet);
+    }
+  }
+}
+teacherWithPet(hogwarts);
