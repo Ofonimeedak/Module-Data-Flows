@@ -9,7 +9,7 @@ let order = [
 
 function orderReceipt(orderItems) {
   const totalList = [];
-  console.log("QUANTITY  ITEM               TOTAL");
+  console.log("QTY  ITEM               TOTAL");
   for (const item of orderItems) {
     const { itemName, quantity, unitPricePence } = item;
 
