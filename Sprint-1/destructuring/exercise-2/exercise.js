@@ -76,7 +76,7 @@ function gryffindorHouse(WizardAndWitch) {
   for (let mate of WizardAndWitch) {
     const { firstName, lastName, house } = mate;
     if (house === "Gryffindor") {
-      const gryffindorMates = `${firstName} ${lastName} lives in `;
+      const gryffindorMates = `${firstName} ${lastName} lives in ${house} house `;
       console.log(gryffindorMates);
     }
   }
