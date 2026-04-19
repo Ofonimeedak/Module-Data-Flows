@@ -90,7 +90,7 @@ function teacherWithPet(WizardAndWitch) {
   for (let teacher of WizardAndWitch) {
     const { firstName, lastName, pet } = teacher;
     if (pet !== null) {
-      const teacherPet = `${firstName} ${lastName} has a pet`;
+      const teacherPet = `${firstName} ${lastName} has a ${pet}`;
       console.log(teacherPet);
     }
   }
