@@ -74,7 +74,7 @@ let hogwarts = [
 //Task 1
 function gryffindorHouse(WizardAndWitch) {
   for (let mate of WizardAndWitch) {
-    const { firstName, lastName, house } = mate;
+    const { firstName, lastName, house} = mate;
     if (house === "Gryffindor") {
       const gryffindorMates = `${firstName} ${lastName} lives in ${house} house `;
       console.log(gryffindorMates);
@@ -88,8 +88,8 @@ gryffindorHouse(hogwarts);
 
 function teacherWithPet(WizardAndWitch) {
   for (let teacher of WizardAndWitch) {
-    const { firstName, lastName, pet } = teacher;
-    if (pet !== null) {
+    const { firstName, lastName, pet,house } = teacher;
+    if (house === "Gryffindor" && pet!==null) {
       const teacherPet = `${firstName} ${lastName} has a ${pet}`;
       console.log(teacherPet);
     }
