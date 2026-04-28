@@ -88,8 +88,8 @@ gryffindorHouse(hogwarts);
 
 function teacherWithPet(WizardAndWitch) {
   for (let teacher of WizardAndWitch) {
-    const { firstName, lastName, pet,house } = teacher;
-    if (house === "Gryffindor" && pet!==null) {
+    const { firstName, lastName, pet,occupation} = teacher;
+    if (occupation=== "Teacher" && pet!==null) {
       const teacherPet = `${firstName} ${lastName} has a ${pet}`;
       console.log(teacherPet);
     }
